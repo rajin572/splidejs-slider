@@ -1,0 +1,26 @@
+/* .splide__arrows{
+    position: absolute;
+    top: 0;
+    right: 0%;
+} */
+
+.splide__arrow {
+    background: #ccc;
+    border: 0;
+    border-radius: 0%;
+    cursor: pointer;
+    /* display: flex; */
+    height: 2em;
+    opacity: 0.7;
+    padding: 0;
+    position: absolute;
+    /* transform: translateY(-50%); */
+    width: 3em;
+    z-index: 1;
+}
+.splide__arrow--prev {
+    left: -4em;
+}
+.splide__arrow--next {
+    left: 1em;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <!-- Tailwind CSS CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN Link -->
+    <script src="https://kit.fontawesome.com/6a68f40924.js" crossorigin="anonymous"></script>
+
+    <!-- Splide Slider CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="./productSlider.css" />
+  </head>
+
+  <body>
+    <div class="w-[95%] md:w-[90%] m-auto relative">
+      <h2 class="text-3xl mb-10 font-bold">Browse by Category</h2>
+      <section class="splide mt-[20px]" aria-label="Splide Basic HTML Example">
+        <!-- Arrow Start -->
+        <div class="splide__arrows absolute top-0 right-[10%]">
+            <button class="splide__arrow splide__arrow--prev">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+
+        </div>
+        <!-- Arrow End -->
+
+        <!-- Slider Section -->
+        <div class="splide__track pt-10">
+          <ul class="splide__list h-36">
+            <li class="splide__slide border m-4 ">
+              <div class="flex justify-center flex-col py-5 items-center">
+                <img class="h-12" src="./assest/elec-4.png" alt="" />
+                <div class="mt-2">
+                    <h4 class="text-sm font-bold">Phone</h4>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide border m-4">
+                <div class="flex justify-center flex-col py-5 items-center">
+                  <img class="h-12" src="./assest/computer.png" alt="" />
+                  <div class="mt-2">
+                      <h4 class="text-sm font-bold">Computer</h4>
+                  </div>
+                </div>
+              </li>
+            <li class="splide__slide border m-4">
+                <div class="flex justify-center flex-col py-5 items-center">
+                  <img class="h-12" src="./assest/laptop.png" alt="" />
+                  <div class="mt-2">
+                      <h4 class="text-sm font-bold">Laptop</h4>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide border m-4">
+                <div class="flex justify-center flex-col py-5 items-center">
+                  <img class="h-12" src="./assest/monitor.png" alt="" />
+                  <div class="mt-2">
+                      <h4 class="text-sm font-bold">Monitor</h4>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Splide JS Start -->
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        perPage: 8,
+        perMove: 4,
+        breakpoints: {
+            1080: {
+                perPage: 6,
+            perMove: 2,
+          },
+          780: {
+            perPage: 4,
+            perMove: 1,
+          },
+          576: {
+            perPage: 3,
+            perMove: 1,
+          },
+
+        },
+      });
+
+      splide.mount();
+    </script>
+    <!-- Splide JS END -->
+  </body>
+</html>
